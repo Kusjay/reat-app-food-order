@@ -48,7 +48,12 @@ const Checkout = (props) => {
 			return;
 		}
 
-		//  Subit cart data
+		props.onConfrim({
+			name: enteredName,
+			street: enteredStreet,
+			city: enteredCity,
+			postalCode: enteredPostalCode
+		});
 	};
 
 	const nameControlClasses = `${classes.control} ${
